@@ -15,4 +15,3 @@ npm start
 npm run build
 ```
 
-Currently unsure how to compile CSS using webpack 4, if anyone knows please help!
