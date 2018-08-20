@@ -1,21 +1,16 @@
 // Core modules
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
 import { BrowserRouter, Route } from 'react-router-dom';
-// Middleware
-import ReduxPromise from 'redux-promise'
 // Css
-import "./style/style.css";
+import './style/style.css';
 // React Redux components
 import App from './components/app';
-import reducers from './reducers';
-
-const createStoreWithMiddleware = applyMiddleware(ReduxPromise)(createStore);
+import Root from './store/root';
 
 ReactDOM.render(
-  <Provider store={createStoreWithMiddleware(reducers)}>
+  <Root>
     <App />
-  </Provider>
-  , document.querySelector('.root'));
+  </Root>,
+  document.querySelector('.root')
+);
